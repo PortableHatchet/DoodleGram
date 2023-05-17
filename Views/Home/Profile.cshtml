@@ -2,8 +2,35 @@
 @model UserModel
 
 @{
-    ViewData["Title"] = "Profile";
+  ViewData["Title"] = "Profile";
 }
 
-<h1>Username</h1>
-<p>Email</p>
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>My Profile</title>
+    </head>
+    <body>
+  <header>
+    <h1>My Doodle Profile</h1>
+  </header>
+  <div class="container">
+    <!-- User information -->
+    <h2>Username</h2>
+    <p>Email: user@example.com</p>
+
+    <!-- Doodle section -->
+    <h2>My Doodles</h2>
+    <div class="doodle">
+      <img src="path/to/doodle1.jpg" alt="Doodle 1">
+      <p>Description: A beautiful doodle</p>
+    </div>
+    <div class="doodle">
+      <img src="path/to/doodle2.jpg" alt="Doodle 2">
+      <p>Description: Another amazing doodle</p>
+    </div>  
+    </body>
+</html>
+
+
+
