@@ -6,6 +6,4 @@ public class PostModel
     public string imageUrl { get; set; }
 
     private int userId { get; set; }
-
-
 }
