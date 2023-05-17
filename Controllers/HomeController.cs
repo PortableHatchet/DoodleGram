@@ -28,9 +28,9 @@ public class HomeController : Controller
         return View();
     }
 
-    public IActionResult SignUp()
+    public IActionResult SignUpButton()
     {
-        return View();
+        return View("~/Views/Account/SignUp.cshtml");
     }
 
     [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
