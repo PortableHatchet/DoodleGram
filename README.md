@@ -23,8 +23,8 @@ I used Jetbrains Rider For this project. The C# implementation for coding is ver
 I used Microsofts ASP.Net Core MVC Framework for this project. html pages are technically written in cshtml and there is some JavaScript implementation for the doodle function when creating doodles. 
 # Useful Websites
 
-{Make a list of websites that you found helpful in this project}
 * [Microsoft](https://learn.microsoft.com/en-us/aspnet/core/mvc/overview?view=aspnetcore-7.0)
+
 * [YouTube(IAmTimCorey)](https://www.youtube.com/watch?v=1ck9LIBxO14)
 
 # Future Work
