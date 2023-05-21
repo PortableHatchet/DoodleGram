@@ -12,25 +12,30 @@ public class HomeController : Controller
     {
         _logger = logger;
     }
-
+//Main homepage view
     public IActionResult Index()
     {
         return View();
     }
-
+//Privacy View
     public IActionResult Privacy()
     {
         return View();
     }
-    
+    //Pulls up user profile
     public IActionResult Profile()
     {
         return View();
     }
-
+    
     public IActionResult SignUpButton()
     {
         return View("~/Views/Account/SignUp.cshtml");
+    }
+
+    public IActionResult LoginButton()
+    {
+        return View("~/Views/Account/Login.cshtml");
     }
 
     [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]

@@ -7,19 +7,19 @@
 @using (Html.BeginForm("SignUp", "Account", FormMethod.Post))
 {
   @Html.AntiForgeryToken()
-
+  <!-- Asks for email-->
   <div class="form-group">
     @Html.LabelFor(m => m.email)
     @Html.TextBoxFor(m => m.email, new { @class = "form-control" })
     @Html.ValidationMessageFor(m => m.email)
   </div>
-
+  <!--Asks for password -->
   <div class="form-group">
     @Html.LabelFor(m => m.password)
     @Html.PasswordFor(m => m.password, new { @class = "form-control" })
     @Html.ValidationMessageFor(m => m.password)
   </div>
-
+  <!--Asks to confirm password -->
   <div class="form-group">
     @Html.LabelFor(m => m.confirmPassword)
     @Html.PasswordFor(m => m.confirmPassword, new { @class = "form-control" })

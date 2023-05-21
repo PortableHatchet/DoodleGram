@@ -1,7 +1,7 @@
 ﻿// Please see documentation at https://docs.microsoft.com/aspnet/core/client-side/bundling-and-minification
 // for details on configuring this project to bundle and minify static web assets.
 
-// Write your JavaScript code.
+
 document.addEventListener("DOMContentLoaded", function() {
     const canvas = document.getElementById("paintCanvas");
     const context = canvas.getContext("2d");
@@ -16,11 +16,13 @@ document.addEventListener("DOMContentLoaded", function() {
 
     document.getElementById("clearButton").addEventListener("click", clearCanvas);
 
+    //Drawing begins on mousedown
     function startDrawing(e) {
         isDrawing = true;
         [lastX, lastY] = [e.offsetX, e.offsetY];
     }
-
+    
+    //Drawing follows the cursor as long as mousedown is still in effect
     function draw(e) {
         if (!isDrawing) return;
         context.beginPath();

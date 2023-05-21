@@ -1,0 +1,21 @@
+@model UserModel
+@{
+	ViewData["Title"] = "Login";
+}
+
+@using (Html.BeginForm("Login", "Account", FormMethod.Post))
+{
+	@Html.AntiForgeryToken()
+	<!-- Asks for email-->
+	<div class="form-group">
+		@Html.LabelFor(m => m.email)
+		@Html.TextBoxFor(m => m.email, new { @class = "form-control" })
+	</div>
+	<!--Asks for password -->
+	<div class="form-group">
+		@Html.LabelFor(m => m.password)
+		@Html.PasswordFor(m => m.password, new { @class = "form-control" })
+	</div>
+
+	<button type="submit" class="btn btn-primary">Login</button>
+}

@@ -12,9 +12,7 @@ public class AccountController : Controller
         if (ModelState.IsValid)
         {
             SaveAccountToFile(model);
-            // Perform sign-up logic (e.g., create a new user, save to database)
-            // You can access the sign-up data via the `model` parameter
-
+            
             // Redirect to a success page or perform any other desired action
             return RedirectToAction("SignUpSuccess");
         }
@@ -22,6 +20,26 @@ public class AccountController : Controller
         // If the sign-up form is not valid, return the view with validation errors
         return View(model);
     }
+    //Similar to signup but returns to homepage and only requires password 
+    public ActionResult Login(string email, string password)
+    {
+        string filePath = @"C:DoodleGram\Models\UserInfo.txt";
+        string[] lines = System.IO.File.ReadAllLines(filePath);
+
+        foreach (string line in lines)
+        {
+            string[] credentials = line.Split(',');
+
+            if (credentials.Length == 2 && credentials[0] == email && credentials[1] == password)
+            {
+                // Credentials matched
+                return RedirectToAction("Index", "Home");
+            }
+        }
+
+        return View();
+    }
+
 
     private void SaveAccountToFile(SignUpModel model)
     {
@@ -55,7 +73,6 @@ public class AccountController : Controller
     {
         string filePath = @"C:DoodleGram\Models\UserInfo.txt";
         string fileContent = System.IO.File.ReadAllText(filePath);
-        return View((object)fileContent); 
-
+        return View((object)fileContent);
     }
 }
